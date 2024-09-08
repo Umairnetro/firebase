@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- Suse -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form action="#">
+        <h1>Login</h1>
+        <div class="inputs">
+          <label for="email"> Email: </label>
+          <input id="email" type="text" name="email" placeholder="Enter Your Email" />
+          <h3 id="message">Please try another email</h3>
+        </div>
+        <div class="inputs">
+          <label for="password"> Password: </label>
+          <input id="password" type="text" name="password" placeholder="Enter Your Password"
+          />
+        </div>
+        <button id="loginBtn">Login</button>
+      </form>
+      <h3>Don't have an account? <a href="register.html">Register</a></h3>
+    </div>
+    <script type="module" src="../javascript/main.js"></script>
+  </body>
+</html>

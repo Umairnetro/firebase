@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SUSE", sans-serif;
+  color: var(--text-color);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  --primary-color: #192626;
+  --secondary-color: white;
+  --bg-color: #5eafaf;
+  --text-color: #243030;
+  --transition: 0.2s linear;
+  --error-color: #fb6969;
+}
+
+.container {
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Dashboard */
+.dashboard {
+  text-align: center;
+  color: var(--secondary-color);
+  width: 40%;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.dashboard h1 {
+  color: var(--secondary-color);
+  font-size: 3rem;
+}
+
+.dashboard .join {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  align-self: center;
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.dashboard .join:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  align-self: center;
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Sign In & Sign Up */
+form {
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+form h1 {
+  text-align: center;
+}
+
+form label {
+  margin-left: 0.8rem;
+  margin-bottom: 6px;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 40px;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color);
+}
+
+form #registerBtn,
+form #loginBtn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 40px;
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  margin-top: 20px;
+  transition: all var(--transition);
+}
+
+form #registerBtn:hover,
+form #loginBtn:hover {
+  box-shadow: 0 0 10px 0 var(--primary-color);
+}
+
+form #message {
+  color: var(--error-color);
+  font-size: 0.9rem;
+  display: none;
+  margin-top: 5px;
+}
+
+form #message::before {
+  content: "*";
+}
+
+h3{
+  text-align: center;
+  color: var(--secondary-color);
+  font-weight: 200;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+h3>a{
+  color: var(--secondary-color);
+}
+
+h3>a:hover{
+  --secondary-color: rgb(202, 202, 202);
+  color: var(--secondary-color);
+}
