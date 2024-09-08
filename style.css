@@ -57,6 +57,7 @@ body {
   font-size: 0.9rem;
   cursor: pointer;
   transition: all var(--transition);
+  text-decoration: none;
 }
 
 .dashboard .join:hover {
@@ -127,19 +128,18 @@ form #message::before {
   content: "*";
 }
 
-h3{
-  text-align: center;
+h3 {
   color: var(--secondary-color);
   font-weight: 200;
   font-size: 1.1rem;
   margin-top: 10px;
 }
 
-h3>a{
+.container > h3 a {
   color: var(--secondary-color);
 }
 
-h3>a:hover{
+.container > h3 a:hover {
   --secondary-color: rgb(202, 202, 202);
   color: var(--secondary-color);
 }

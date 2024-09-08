@@ -11,13 +11,6 @@ const password = document.querySelector("#password");
 const registerBtn = document.querySelector("#registerBtn");
 const message = document.querySelector("#message");
 
-if (joinBtn) {
-  joinBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.location.href = "./login.html";
-  });
-}
-
 if (registerBtn) {
   registerBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -49,10 +42,11 @@ if (loginBtn) {
         // Signed in
         const user = userCredential.user;
         console.log(user);
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
       })
       .catch((error) => {
         console.log(error);
+        message.style.display = "block";
         message.innerHTML = "email or password is incorrect";
       });
   });
