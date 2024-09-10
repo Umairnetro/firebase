@@ -5,11 +5,20 @@ import {
   signInWithEmailAndPassword,
 } from "./firebase.js";
 
-const joinBtn = document.querySelector(".join");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const registerBtn = document.querySelector("#registerBtn");
 const message = document.querySelector("#message");
+
+const showMessage = (message, htmlElement) => {
+  let msg = document.querySelector(htmlElement);
+  msg.innerHTML = message;
+  msg.style.display = "block";
+
+  setTimeout(() => {
+    msg.style.display = "none";
+  }, 3000);
+};
 
 if (registerBtn) {
   registerBtn.addEventListener("click", (e) => {
@@ -19,15 +28,17 @@ if (registerBtn) {
         // Signed up
         const user = userCredential.user;
         console.log(user);
-        message.innerHTML = "Successfully registered";
-        message.style.display = "block";
+        showMessage("Successfully registered", "#message");
         window.location.href = "./login.html";
       })
       .catch((error) => {
         email.value = "";
         password.value = "";
-        message.style.display = "block";
-        message.innerHTML = "Please try another email";
+        if (error.code === "auth/email-already-in-use") {
+          showMessage("Email already in use", "#message");
+        } else {
+          showMessage("Unable to register", "#message");
+        }
       });
   });
 }
