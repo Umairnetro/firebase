@@ -20,6 +20,7 @@ body {
   --text-color: #243030;
   --transition: 0.2s linear;
   --error-color: #fb6969;
+  --glow: 0px 0px 16px 1px #1926262f;
 }
 
 .container {
@@ -88,7 +89,7 @@ body {
 
 form {
   width: 100%;
-  border-top: 1px solid  var(--bg-color2);
+  border-top: 1px solid var(--bg-color2);
   border-bottom: 1px solid var(--bg-color2);
   padding: 20px;
   gap: 1.4rem;
@@ -109,7 +110,7 @@ form input {
   border-radius: 40px;
   font-size: 1rem;
   border: 2px solid var(--primary-color);
-  background-color:transparent;
+  background-color: transparent;
 }
 
 form input::placeholder {
@@ -132,7 +133,7 @@ form #loginBtn {
 
 form #registerBtn:hover,
 form #loginBtn:hover {
-  box-shadow: 0 0 10px 0 var(--primary-color);
+  box-shadow: var(--glow);
 }
 
 form #message {
