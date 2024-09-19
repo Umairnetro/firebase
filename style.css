@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "SUSE", sans-serif;
-  color: var(--text-color);
+  color: var(--text-color); 
 }
 
 html,
@@ -21,10 +21,11 @@ body {
   --transition: 0.2s linear;
   --error-color: #fb6969;
   --glow: 0px 0px 16px 1px #1926262f;
+  
 }
 
 .container {
-  background: url(./assets/Noise-Gradient-bg.png);
+  background: url("./assets/Lines.svg");
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -32,6 +33,17 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url("./assets/Simple-gradient-background\ \(Compressed\).png");
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
 }
 
 /* Dashboard */
